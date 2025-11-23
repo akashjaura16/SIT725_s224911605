@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    
+<nav>
+    <div class="nav-wrapper navbar-size">
+        <a href="#" class="brand-logo">📚 Books</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h4 class="center-align">Popular Books</h4>
+    <div class="row" id="books-container"></div>
+</div>
+<a class="waves-effect waves-light btn modal-trigger" data-target="modal1">
+  Add New Book
+</a>
+<div id="modal1" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>Add a Book</h4>
+
+    <div class="input-field">
+      <input id="book_title" type="text">
+      <label for="book_title">Book Title</label>
+    </div>
+
+    <div class="input-field">
+      <input id="book_author" type="text">
+      <label for="book_author">Author</label>
+    </div>
+
+    <div class="input-field">
+      <input id="book_desc" type="text">
+      <label for="book_desc">Description</label>
+    </div>
+
+    <div class="input-field">
+      <input id="book_image" type="text">
+      <label for="book_image">Image URL</label>
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+    <a class="waves-effect waves-green btn" id="submitBook">Submit</a>
+  </div>
+</div>
+
+<!-- jQuery MUST come before Materialize -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Your JS -->
+<script src="js/scripts.js"></script>
+
+
+
+</body>
+</html>
