@@ -1,0 +1,14 @@
+{
+  "name": "sit725-5-3c-books-mvc",
+  "version": "1.0.0",
+  "description": "SIT725 Task 5.3C - MVC + MongoDB Books Catalog (Read-only API + simple client)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.6.0"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIT725 5.3C - Books Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container">
+      <h1>Books Catalog</h1>
+      <p class="subtitle">SIT725 Task 5.3C – MVC + MongoDB (Read‑only)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <div class="list-panel">
+        <h2>All Books</h2>
+        <div id="books-list" class="books-grid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+
+      <aside class="detail-panel">
+        <h2>Book Details</h2>
+        <div id="book-detail" class="detail-card empty">
+          <p>Select a book from the left to see details here.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <small>Data loaded from <code>/api/books</code> (MongoDB).</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
