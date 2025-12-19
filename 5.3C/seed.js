@@ -1,52 +1,54 @@
 import mongoose from "mongoose";
-import Book from "./models/book.model.js";
+import Book from "./models/Book.js";
 
-await mongoose.connect("mongodb://127.0.0.1:27017/booksdb");
+const MONGO_URI = "mongodb://localhost:27017/booksdb";
+
+await mongoose.connect(MONGO_URI);
 
 await Book.deleteMany();
 
 await Book.insertMany([
   {
     title: "The Three-Body Problem",
-    authors: "Liu Cixin",
-    year: 2006,
+    author: "Liu Cixin",
+    year: 2008,
     genre: "Science Fiction",
-    summary: "A science fiction novel about humanity's first contact with an alien civilisation.",
-    price: 29.99
+    summary: "First novel.",
+    price: mongoose.Types.Decimal128.fromString("24.99")
   },
   {
     title: "Jane Eyre",
-    authors: "Charlotte Brontë",
+    author: "Charlotte Brontë",
     year: 1847,
     genre: "Classic",
-    summary: "A novel following the emotions and experiences of its eponymous heroine.",
-    price: 22.00
+    summary: "A novel about personal growth.",
+    price: mongoose.Types.Decimal128.fromString("19.99")
   },
   {
     title: "Pride and Prejudice",
-    authors: "Jane Austen",
+    author: "Jane Austen",
     year: 1813,
     genre: "Romance",
-    summary: "A romantic novel that critiques the British landed gentry.",
-    price: 22.00
+    summary: "A romantic novel.",
+    price: mongoose.Types.Decimal128.fromString("17.50")
   },
   {
     title: "The English Patient",
-    authors: "Michael Ondaatje",
+    author: "Michael Ondaatje",
     year: 1992,
     genre: "Historical Fiction",
-    summary: "A novel about four people brought together at the end of World War II.",
-    price: 25.39
+    summary: "A tragic love story.",
+    price: mongoose.Types.Decimal128.fromString("21.00")
   },
   {
     title: "Small Gods",
-    authors: "Terry Pratchett",
+    author: "Terry Pratchett",
     year: 1992,
     genre: "Fantasy",
-    summary: "A satirical fantasy novel about religion and belief.",
-    price: 31.99
+    summary: "A Discworld novel.",
+    price: mongoose.Types.Decimal128.fromString("18.75")
   }
 ]);
 
-console.log("Database seeded");
+console.log("Database seeded successfully");
 process.exit();
