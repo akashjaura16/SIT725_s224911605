@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIT725 Books Catalog (5.4D)</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Books Catalog</h1>
+    <p class="banner">developedBy: <strong>s224911605</strong></p>
+    <p class="muted">Vanilla HTML/CSS/JS + Node.js/Express + MongoDB (Mongoose)</p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Read API</h2>
+      <div class="row">
+        <button id="btnLoad">Load books (GET /api/books)</button>
+        <button id="btnPing">Integrity check (GET /api/integrity-check42)</button>
+      </div>
+      <div id="status" class="status" aria-live="polite"></div>
+      <ul id="bookList" class="list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Create (Safe Write)</h2>
+      <form id="createForm" class="form">
+        <label>id <input name="id" placeholder="b1" required /></label>
+        <label>title <input name="title" required /></label>
+        <label>author <input name="author" required /></label>
+        <label>year <input name="year" type="number" min="1450" required /></label>
+        <label>genre
+          <select name="genre" required>
+            <option value="">-- choose --</option>
+            <option>Fiction</option>
+            <option>Non-Fiction</option>
+            <option>Fantasy</option>
+            <option>Science Fiction</option>
+            <option>Mystery</option>
+            <option>Romance</option>
+            <option>Historical</option>
+            <option>Biography</option>
+            <option>Self-Help</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>summary <textarea name="summary" rows="3" required></textarea></label>
+        <label>price (AUD) <input name="price" placeholder="19.99" required /></label>
+        <button type="submit">Create book (POST /api/books)</button>
+      </form>
+      <pre id="createOut" class="out"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Update (Safe Write)</h2>
+      <form id="updateForm" class="form">
+        <label>id to update (path param)
+          <input name="id" placeholder="b1" required />
+        </label>
+        <label>title <input name="title" /></label>
+        <label>author <input name="author" /></label>
+        <label>year <input name="year" type="number" /></label>
+        <label>genre
+          <select name="genre">
+            <option value="">-- unchanged --</option>
+            <option>Fiction</option>
+            <option>Non-Fiction</option>
+            <option>Fantasy</option>
+            <option>Science Fiction</option>
+            <option>Mystery</option>
+            <option>Romance</option>
+            <option>Historical</option>
+            <option>Biography</option>
+            <option>Self-Help</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>summary <textarea name="summary" rows="3"></textarea></label>
+        <label>price (AUD) <input name="price" placeholder="21.00" /></label>
+        <button type="submit">Update book (PUT /api/books/:id)</button>
+      </form>
+      <pre id="updateOut" class="out"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Quick Console One‑Liners</h2>
+      <p class="muted">
+        The report requires single-line fetch calls to trigger validation failures.
+        See <code>README.md</code> for copy/paste examples aligned to each rule.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>For SIT725 Task 5.4D (Safe Writes + Validation).</small>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
