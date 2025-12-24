@@ -1,0 +1,16 @@
+{
+  "name": "sit725-6.2c-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.4.0"
+  }
+}
